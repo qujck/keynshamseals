@@ -65,8 +65,6 @@ a:hover { color: var(--sea-deep); }
 
 .button { display: inline-block; background: var(--sun); color: var(--ink); font-weight: 700; text-decoration: none; padding: 0.8rem 1.3rem; border-radius: 999px; border: 2px solid var(--sun); }
 .button:hover { background: var(--paper); color: var(--ink); }
-.button.ghost { background: transparent; color: var(--paper); border-color: var(--paper); margin-left: 0.5rem; }
-.button.ghost:hover { background: var(--paper); color: var(--ink); }
 .hero-grid { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2rem; align-items: center; }
 .hero-logo { grid-column: 2; grid-row: 1; width: clamp(220px, 28vw, 340px); height: auto; }
 .hero-grid > div { grid-column: 1; grid-row: 1; }
@@ -78,8 +76,6 @@ a:hover { color: var(--sea-deep); }
 .hero .badge { background: var(--paper); color: var(--sea-deep); }
 .hero .button { background: var(--sea-deep); color: var(--paper); border-color: var(--sea-deep); }
 .hero .button:hover { background: var(--paper); color: var(--sea-deep); }
-.hero .button.ghost { background: transparent; color: var(--sea-deep); border-color: var(--sea-deep); }
-.hero .button.ghost:hover { background: var(--paper); }
 
 .fees { list-style: none; padding: 0; margin: 0 0 1.25rem; display: grid; gap: 0.5rem; }
 .fees li { background: var(--paper); border: 2px solid var(--line); border-radius: var(--radius); padding: 0.75rem 1rem; }
@@ -100,6 +96,9 @@ h3 { font-size: 1.2rem; margin: 0 0 0.5rem; color: var(--sea-deep); }
 .card { background: var(--paper); border: 2px solid var(--line); border-radius: var(--radius); padding: 1.25rem; }
 .card p { margin: 0; }
 .card .big { font-size: 1.35rem; font-weight: 700; color: var(--ink); margin-bottom: 0.25rem; }
+.cards.centred .card { text-align: center; }
+.cards.centred .venue-link { flex-direction: column; gap: 0.4rem; }
+.card p + p { margin-top: 0.5rem; }
 
 /* Quotes */
 .quotes { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin-top: 1.25rem; }
@@ -125,7 +124,6 @@ figure.quote figcaption { color: var(--ink-soft); font-size: 0.95rem; }
 .gallery .wide { grid-column: 1 / -1; }
 .gallery.strip { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
 .gallery.strip img { aspect-ratio: 4 / 3; object-fit: cover; }
-.gallery.strip img.top { object-position: 50% 12%; }
 .quote-photo { align-self: start; }
 .gallery.even .wide img { aspect-ratio: auto; }
 @media (max-width: 760px) { .split { grid-template-columns: 1fr; } }
@@ -133,11 +131,10 @@ figure.quote figcaption { color: var(--ink-soft); font-size: 0.95rem; }
 .notice { background: var(--foam); border: 2px solid var(--sea); border-radius: var(--radius); padding: 1.25rem; max-width: var(--measure); }
 
 /* Footer */
-.site-footer { background: var(--ink); color: #dbe6ee; padding: 2rem 0; font-size: 0.95rem; }
+.site-footer { background: linear-gradient(90deg, var(--sea-deep) 0%, var(--sea-light) 100%); color: var(--paper); padding: 2rem 0; font-size: 0.95rem; }
 .site-footer a { color: #ffffff; }
 .site-footer p { margin: 0 0 0.5rem; }
 
 @media (max-width: 560px) {
-  .button.ghost { margin: 0.75rem 0 0; }
   .hero { padding: 2.25rem 0 3.75rem; }
 }
