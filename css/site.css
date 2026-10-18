@@ -118,13 +118,14 @@ figure.quote figcaption { color: var(--ink-soft); font-size: 0.95rem; }
 .photo figcaption { color: var(--ink-soft); font-size: 0.95rem; margin-top: 0.5rem; }
 .split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 460px); gap: 2rem; align-items: start; }
 .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.pair figcaption { grid-column: 1 / -1; text-align: center; margin-top: 0; }
 .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; align-items: start; margin-top: 1.5rem; }
 .gallery.even img { aspect-ratio: 4 / 3; object-fit: cover; object-position: 50% 45%; }
 .gallery.even { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .gallery .wide { grid-column: 1 / -1; }
 .gallery.strip { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
 .gallery.strip img { aspect-ratio: 4 / 3; object-fit: cover; }
-.quote-photo { align-self: start; }
+.quote-photo { align-self: end; }
 .gallery.even .wide img { aspect-ratio: auto; }
 @media (max-width: 760px) { .split { grid-template-columns: 1fr; } }
 
