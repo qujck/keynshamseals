@@ -1,0 +1,109 @@
+/* Keynsham Seals: one stylesheet for every page. Large type, strong contrast (every text colour passes
+   WCAG AA on its background), visible focus, and nothing that moves for anyone who asks for less motion. */
+
+:root {
+  --ink: #0b2239;
+  --ink-soft: #33495f;
+  --paper: #ffffff;
+  --sea: #0b5c8a;
+  --sea-deep: #073b5c;
+  --foam: #e8f4fa;
+  --sun: #ffd23f;
+  --line: #c9dbe6;
+  --focus: #ffbf00;
+  --radius: 14px;
+  --measure: 68ch;
+  font-size: 112.5%;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+}
+
+a { color: var(--sea); text-underline-offset: 0.18em; }
+a:hover { color: var(--sea-deep); }
+:focus-visible { outline: 4px solid var(--focus); outline-offset: 3px; border-radius: 4px; }
+
+.skip-link {
+  position: absolute; left: 1rem; top: -4rem; z-index: 10;
+  background: var(--ink); color: var(--paper); padding: 0.75rem 1rem; border-radius: 8px;
+}
+.skip-link:focus { top: 1rem; }
+
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 1rem; }
+
+/* Header and navigation */
+.site-header { background: var(--sea-deep); color: var(--paper); }
+.site-header .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.75rem; padding-top: 0.9rem; padding-bottom: 0.9rem; }
+.brand { display: flex; align-items: center; gap: 0.7rem; color: var(--paper); text-decoration: none; font-weight: 700; font-size: 1.15rem; line-height: 1.2; }
+.brand:hover { color: var(--paper); }
+.brand img { width: 52px; height: 52px; flex: none; }
+.brand small { display: block; font-weight: 400; font-size: 0.85rem; opacity: 0.92; }
+.site-nav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.25rem 1.25rem; }
+.site-nav a { color: var(--paper); font-weight: 600; text-decoration: none; padding: 0.35rem 0; display: inline-block; border-bottom: 3px solid transparent; }
+.site-nav a:hover, .site-nav a[aria-current="page"] { border-bottom-color: var(--sun); color: var(--paper); }
+
+/* Hero */
+.hero { background: linear-gradient(180deg, var(--sea-deep) 0%, var(--sea) 100%); color: var(--paper); padding: 3rem 0 4.5rem; position: relative; overflow: hidden; }
+.hero h1 { font-size: clamp(2rem, 5vw, 3.1rem); line-height: 1.15; margin: 0 0 1rem; max-width: 20ch; }
+.hero p { font-size: 1.2rem; max-width: 46ch; margin: 0 0 1.5rem; }
+.hero .waves { position: absolute; left: 0; right: 0; bottom: -1px; width: 100%; height: 48px; display: block; }
+
+.badge { display: inline-block; background: var(--sun); color: var(--ink); font-weight: 700; padding: 0.3rem 0.8rem; border-radius: 999px; margin-bottom: 1rem; }
+
+.button { display: inline-block; background: var(--sun); color: var(--ink); font-weight: 700; text-decoration: none; padding: 0.8rem 1.3rem; border-radius: 999px; border: 2px solid var(--sun); }
+.button:hover { background: var(--paper); color: var(--ink); }
+.button.ghost { background: transparent; color: var(--paper); border-color: var(--paper); margin-left: 0.5rem; }
+.button.ghost:hover { background: var(--paper); color: var(--ink); }
+
+/* Sections */
+main section { padding: 2.75rem 0; }
+main section.tint { background: var(--foam); }
+h2 { font-size: clamp(1.5rem, 3.5vw, 2rem); line-height: 1.2; margin: 0 0 1rem; color: var(--sea-deep); }
+h3 { font-size: 1.2rem; margin: 0 0 0.5rem; color: var(--sea-deep); }
+.prose { max-width: var(--measure); }
+.prose p { margin: 0 0 1rem; }
+
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; margin-top: 1.25rem; }
+.card { background: var(--paper); border: 2px solid var(--line); border-radius: var(--radius); padding: 1.25rem; }
+.card p { margin: 0; }
+.card .big { font-size: 1.35rem; font-weight: 700; color: var(--ink); margin-bottom: 0.25rem; }
+
+/* Quotes */
+.quotes { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin-top: 1.25rem; }
+figure.quote { margin: 0; background: var(--paper); border-left: 6px solid var(--sea); border-radius: 0 var(--radius) var(--radius) 0; padding: 1.25rem 1.25rem 1rem; }
+figure.quote blockquote { margin: 0 0 0.75rem; font-size: 1.1rem; }
+figure.quote figcaption { color: var(--ink-soft); font-size: 0.95rem; }
+
+/* Contact */
+.contact-list { list-style: none; padding: 0; margin: 1rem 0 0; display: grid; gap: 0.75rem; }
+.contact-list li { display: flex; flex-wrap: wrap; gap: 0.25rem 0.75rem; align-items: baseline; }
+.contact-list strong { min-width: 9ch; }
+.contact-list a { font-size: 1.15rem; font-weight: 600; word-break: break-word; }
+
+/* Timeline (50 years page) */
+.timeline { list-style: none; margin: 1.5rem 0 0; padding: 0; border-left: 4px solid var(--sea); }
+.timeline li { position: relative; padding: 0 0 1.5rem 1.5rem; max-width: var(--measure); }
+.timeline li::before { content: ""; position: absolute; left: -12px; top: 0.35rem; width: 20px; height: 20px; border-radius: 50%; background: var(--sun); border: 4px solid var(--sea); }
+.timeline .when { display: block; font-weight: 700; color: var(--sea-deep); font-size: 1.1rem; }
+
+.notice { background: var(--foam); border: 2px solid var(--sea); border-radius: var(--radius); padding: 1.25rem; max-width: var(--measure); }
+
+/* Footer */
+.site-footer { background: var(--ink); color: #dbe6ee; padding: 2rem 0; font-size: 0.95rem; }
+.site-footer a { color: #ffffff; }
+.site-footer p { margin: 0 0 0.5rem; }
+
+@media (max-width: 560px) {
+  .button.ghost { margin: 0.75rem 0 0; }
+  .hero { padding: 2.25rem 0 3.75rem; }
+}
