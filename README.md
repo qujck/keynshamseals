@@ -23,11 +23,14 @@ The site is served by Apache on qujck.com from `/var/www/keynshamseals` (owned b
 also hosts other live sites, so only that folder is changed.
 
 ```
-rsync -a --delete --exclude .git --exclude deploy --exclude README.md ./ qujck.com:keynshamseals-upload/
+rsync -a --delete --exclude .git --exclude deploy --exclude README.md --exclude incoming --exclude .gitignore ./ qujck.com:keynshamseals-upload/
 ssh qujck.com 'sudo rsync -a --delete ~/keynshamseals-upload/ /var/www/keynshamseals/ && sudo chown -R www-data:www-data /var/www/keynshamseals'
 ```
 
 DNS is on Cloudflare: `@` and `www` are proxied to qujck.com (`206.189.247.167`), with SSL set to Full (strict).
+
+Cloudflare caches CSS and images for four hours but not the HTML. When `css/site.css` or a logo changes, bump the
+`?v=` value on its links in both pages so visitors get the new file. A new image gets a new file name instead.
 The origin certificate is Let's Encrypt, renewed by certbot's timer. After publishing, Cloudflare may serve
 cached copies for a while; purge the cache in Cloudflare to see a change at once.
 

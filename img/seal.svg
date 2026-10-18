@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Keynsham Seals">
-  <circle cx="32" cy="32" r="31" fill="#ffd23f"/>
-  <path d="M10 42c4 3 8 3 12 0s8-3 12 0 8 3 12 0 6-2 8-1v12a20 20 0 0 1-2 2H12a28 28 0 0 1-5-9c1-2 2-4 3-4z" fill="#0b5c8a"/>
-  <path d="M18 38c-1-9 5-17 14-18 6-1 11 2 13 6 1 2 3 3 5 3l3 1c1 1 0 3-2 3h-5c-3 0-4 2-6 4-5 4-14 5-22 1z" fill="#073b5c"/>
-  <circle cx="44" cy="27" r="1.6" fill="#ffffff"/>
-  <path d="M50 31l5-1M50 32l5 1" stroke="#073b5c" stroke-width="1.2" stroke-linecap="round"/>
-  <path d="M24 39c-2 3-5 4-8 4 2-2 3-4 4-6z" fill="#073b5c"/>
-</svg>
