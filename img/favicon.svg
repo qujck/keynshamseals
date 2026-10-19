@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="8 42 1264 1264">
-<style>@media (prefers-color-scheme:dark){g{fill:#ffda66}}</style>
-<g fill="#063d71" stroke="#063d71" stroke-width="300" stroke-linejoin="round" transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)"
+<circle cx="640" cy="674" r="608" fill="#ffffff" stroke="#1d1d1b" stroke-width="56"/>
+<g transform="translate(640 674) scale(0.8) translate(-638 -672)">
+<g fill="#1d1d1b" stroke="#1d1d1b" stroke-width="300" stroke-linejoin="round" transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)"
 >
 <path d="M2875 9665 c-150 -29 -268 -66 -443 -142 -284 -124 -414 -240 -587
 -528 -84 -140 -125 -224 -169 -354 -67 -192 -104 -235 -237 -270 -99 -25 -256
@@ -109,5 +110,6 @@ l-120 -59 -131 12 c-195 17 -364 47 -394 69 -28 21 -47 62 -39 83 3 8 99 73
 <path d="M12114 4782 c-156 -112 -231 -142 -468 -191 -101 -21 -132 -31 -134
 -44 -5 -22 15 -22 141 4 129 26 259 64 318 94 56 29 221 139 238 158 9 11 8
 17 -2 25 -10 8 -32 -3 -93 -46z"/>
+</g>
 </g>
 </svg>
