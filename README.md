@@ -38,3 +38,6 @@ cached copies for a while; purge the cache in Cloudflare to see a change at once
 
 Facts come from the BBC article "'Lifeline' swimming group celebrating 50 years" (18 October 2026) and the
 council's Live Well listing. The contact details are the ones on that listing, confirmed for use by the club.
+
+The 50 years page links to the BBC article itself. If that link ever breaks, use the Wayback Machine copy
+instead: https://web.archive.org/web/20261019090650/https://www.bbc.com/news/articles/crd6d2qd36lxo
